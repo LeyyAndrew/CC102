@@ -9,10 +9,10 @@ int main()
 	cout << "Enter Second Number: ";
 	cin >> b;
 	
-	cout <<"sum: "  << a << '+' << b << '=' << a+b <<endl;
-	cout <<"Difference: " << a << '-' << b << '=' << a-b <<endl;
-	cout <<"Quotient: " << a << '*' << b << '=' << a*b <<endl;
-	cout <<"Product: " << a << '/' << b << '=' << a/b <<endl;
+	cout << "sum: "  << a << '+' << b << '=' << a+b << endl;
+	cout << "Difference: " << a << '-' << b << '=' << a-b << endl;
+	cout << "Quotient: " << a << '*' << b << '=' << a*b << endl;
+	cout << "Product: " << a << '/' << b << '=' << a/b << endl;
 	cout << "Remainder: " << a << '%' << b << '=' << a % b << endl;
 	
 	return 0;
