@@ -40,11 +40,11 @@ int main ()
 	coffeePriceUsd = coffeeQty * coffeeCost;
 	milkPriceUSD = milkQty * milkCost;
 	
-	sugarPhp = sugarPriceUsd / rates;
-	ricePhp = ricePricePound / rates;
-	sardines = sardinesPricePound / rates;
-	coffeePhp = coffeePriceUsd / rates;
-	milkPhp = milkPriceUSD/ rates;
+	sugarPhp = sugarPriceUsd * rates;
+	ricePhp = ricePricePound  * rates;
+	sardines = sardinesPricePound * rates;
+	coffeePhp = coffeePriceUsd * rates;
+	milkPhp = milkPriceUSD * rates;
 	
 	totalcostPhp = SugarPhp + rice
 	
