@@ -3,63 +3,49 @@ using namespace std;
 
 int main ()
 {
-	float SugarPriceUSD,ricePricePound,sardinesPricePound,CoffeePriceUsd,milkPriceUSD;
+	double SugarPriceUSD,ricePricePound,sardinesPricePound,CoffeePriceUsd,milkPriceUSD;
 	int sugarQty,riceQty,sardinesQty,coffeeQty,milkQty, totalpricesugar, totalpriceCoffee, totalpriceMilk;
-	float usdToPhp, poundToPhp, totalCostPhp, ratesUSD = 0.0, ratesPounds = 0.0;
-	int sugarPriceUsd, coffeePriceUsd, milkPriceUsd, sugarPhp, coffeePhp, milkPhp;
-	float sugarCost, riceCost, sardinesCost, coffeeCost, milkCost;
-	
-	cout << "Quantity of sugar: \n";
-	cin >> sugarQty; 
-	cout << "Quantity of rice: \n";
-	cin >> riceQty;
-	cout << "Quantity of sardines: \n";
-	cin >> sardinesQty;
-	cout << "Quantity of coffee: \n";
-	cin >> coffeeQty;
-	cout << "Quantity of milk: \n";
-	cin >> milkQty;
-	cout << "Enter Cost of Sugar";
-	cin >> sugarCost;
-	cout << "Enter Cost of rice";
-	cin >> riceCost;
-	cout << "Enter Cost of sardines";
-	cin >> sardinesCost;
-	cout << "Enter Cost of coffeeCost";
-	cin >> coffeCost;
-	cout << "Enter Cost of milk";
-	cin >> milkCost;
-	cout << "Enter rates of USD";
+	double ratesUSD = 0.0, ratesPounds = 0.0;
+	cout << "Conversion of USD to PHP: ";
 	cin >> ratesUSD;
-	cout << "Enter rates of Pounds"
+	cout << "Conversion of POUNDS to PHP: ";
 	cin >> ratesPounds;
-	
-	sugarPriceUsd = sugarQty * sugarCost;
-	ricePricePound = riceQty * riceCost;
-	sardinesPricePound = sardinesQty * sardinesCost;
-	coffeePriceUsd = coffeeQty * coffeeCost;
-	milkPriceUSD = milkQty * milkCost;
-	
-	sugarPhp = sugarPriceUsd * rates;
-	ricePhp = ricePricePound  * rates;
-	sardines = sardinesPricePound * rates;
-	coffeePhp = coffeePriceUsd * rates;
-	milkPhp = milkPriceUSD * rates;
-	
-	totalcostPhp = SugarPhp + rice
-	
-	
-	
-	
-	
-	
-	
-	 
-	
-	
-	
-	
-	
+	cout << "Quantity of sugar: ";
+	cin >> sugarQty;
+	cout << "Enter cost of Sugar in USD: ";
+	cin >>  SugarPriceUSD;
+	cout << "Quantity of rice: ";
+	cin >> riceQty;
+	cout << "Enter cost of rice in Pounds: ";
+	cin >> ricePricePound;
+	cout << "Quantity of sardines: ";
+	cin >> sardinesQty;
+	cout << "Enter cost of sardines in Pounds: ";
+	cin >> sardinesPricePound;
+	cout << "Quantity of coffee: ";
+	cin >> coffeeQty;
+	cout << "Enter cost of coffee in USD: ";
+	cin >> CoffeePriceUsd;
+	cout << "Quantity of milk: ";
+	cin >> milkQty;
+	cout << "Enter the cost of milk in USD: ";
+	cin >> milkPriceUSD;
+	double sugarPhp = (SugarPriceUSD * sugarQty) * ratesUSD;
+	double ricePhp = (ricePricePound * riceQty) * ratesPounds;
+	double sardines = (sardinesPricePound * sardinesQty) * ratesPounds;
+	double coffeePhp = ( CoffeePriceUsd * coffeeQty) * ratesUSD;
+	double milkPhp = (milkPriceUSD * milkQty) * ratesUSD;
+	double totalcostPhp = sugarPhp + ricePhp + sardines + coffeePhp + milkPhp;
+	cout << "\n PURCHASE DETAILS\n";
+	cout << "----------------------------------------------------------------\n";
+	cout << "ITEM:\t\tQUANTITY:\t\tTOTALCOST:\n";
+	cout << "Sugar:\t\t " << sugarQty << "			" << sugarPhp << endl;
+	cout << "Rice:\t\t " << riceQty << "			" << ricePhp << endl;
+	cout << "Sardines:\t " << sardinesQty << "			" << sardines << endl;
+	cout << "Coffee:\t\t " << coffeeQty << "			" << coffeePhp << endl;
+	cout << "Milk:\t\t " << milkQty << "			" << milkPhp << endl;
+	cout << "----------------------------------------------------------------\n";
+	cout << "the total amount to be paid in PHP : " << totalcostPhp;
 	
 	return 0;
 }
