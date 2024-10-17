@@ -38,7 +38,7 @@ int main ()
 	double totalCostPHP = sugarCostPHP + riceCostPHP + sardinesCostPHP + coffeeCostPHP + milkCostPHP;
 	cout << "\n PURCHASE DETAILS\n";
 	cout << "----------------------------------------------------------------\n";
-	cout << "ITEM:\t\tQUANTITY:\t\tTOTALCOST(PHP):\n";
+	cout << "ITEM:\t\tQUANTITY:\t\tPRICE(PHP):\n";
 	cout << "Sugar:\t\t " << sugarQty << "			" << sugarCostPHP << "\n";
 	cout << "Rice:\t\t " << riceQty << "			" << riceCostPHP << "\n";
 	cout << "Sardines:\t " << sardinesQty << "			" << sardinesCostPHP << "\n";
