@@ -4,12 +4,12 @@ using namespace std;
 int main ()
 {
 	double SugarPriceUSD,ricePricePound,sardinesPricePound,CoffeePriceUsd,milkPriceUSD;
-	int sugarQty,riceQty,sardinesQty,coffeeQty,milkQty, totalpricesugar, totalpriceCoffee, totalpriceMilk;
-	double ratesUSD = 0.0, ratesPounds = 0.0;
+	int sugarQty,riceQty,sardinesQty,coffeeQty,milkQty;
+	double usdToPhp, poundToPhp;
 	cout << "Conversion of USD to PHP: ";
-	cin >> ratesUSD;
+	cin >> usdToPhp;
 	cout << "Conversion of POUNDS to PHP: ";
-	cin >> ratesPounds;
+	cin >> poundToPhp;
 	cout << "Quantity of sugar: ";
 	cin >> sugarQty;
 	cout << "Enter cost of Sugar in USD: ";
@@ -30,22 +30,22 @@ int main ()
 	cin >> milkQty;
 	cout << "Enter the cost of milk in USD: ";
 	cin >> milkPriceUSD;
-	double sugarPhp = (SugarPriceUSD * sugarQty) * ratesUSD;
-	double ricePhp = (ricePricePound * riceQty) * ratesPounds;
-	double sardines = (sardinesPricePound * sardinesQty) * ratesPounds;
-	double coffeePhp = ( CoffeePriceUsd * coffeeQty) * ratesUSD;
-	double milkPhp = (milkPriceUSD * milkQty) * ratesUSD;
-	double totalcostPhp = sugarPhp + ricePhp + sardines + coffeePhp + milkPhp;
+	double sugarCostPHP = (SugarPriceUSD * sugarQty) * usdToPhp;
+	double riceCostPHP = (ricePricePound * riceQty) * poundToPhp;
+	double sardinesCostPHP = (sardinesPricePound * sardinesQty) * poundToPhp;
+	double coffeeCostPHP = ( CoffeePriceUsd * coffeeQty) * usdToPhp;
+	double milkCostPHP = (milkPriceUSD * milkQty) * usdToPhp;
+	double totalCostPHP = sugarCostPHP + riceCostPHP + sardinesCostPHP + coffeeCostPHP + milkCostPHP;
 	cout << "\n PURCHASE DETAILS\n";
 	cout << "----------------------------------------------------------------\n";
-	cout << "ITEM:\t\tQUANTITY:\t\tTOTALCOST:\n";
-	cout << "Sugar:\t\t " << sugarQty << "			" << sugarPhp << endl;
-	cout << "Rice:\t\t " << riceQty << "			" << ricePhp << endl;
-	cout << "Sardines:\t " << sardinesQty << "			" << sardines << endl;
-	cout << "Coffee:\t\t " << coffeeQty << "			" << coffeePhp << endl;
-	cout << "Milk:\t\t " << milkQty << "			" << milkPhp << endl;
+	cout << "ITEM:\t\tQUANTITY:\t\tTOTALCOST(PHP):\n";
+	cout << "Sugar:\t\t " << sugarQty << "			" << sugarCostPHP << "\n";
+	cout << "Rice:\t\t " << riceQty << "			" << riceCostPHP << "\n";
+	cout << "Sardines:\t " << sardinesQty << "			" << sardinesCostPHP << "\n";
+	cout << "Coffee:\t\t " << coffeeQty << "			" << coffeeCostPHP << "\n";
+	cout << "Milk:\t\t " << milkQty << "			" << milkCostPHP << "\n";
 	cout << "----------------------------------------------------------------\n";
-	cout << "the total amount to be paid in PHP : " << totalcostPhp;
+	cout << "The total amount to be paid in PHP : " << totalCostPHP;
 	
 	return 0;
 }
