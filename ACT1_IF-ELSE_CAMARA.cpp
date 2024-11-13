@@ -8,7 +8,7 @@ int main()
 	cin >> temp;
 	if (temp < 32){
 		cout << "Bring Heavy Jacket";
-	}else if (temp < 50){
+	}else if (temp >= 32 && <= 50){
 		cout << "Bring a light jacket";
 	}else{
 		cout << "No need to bring jacket";
