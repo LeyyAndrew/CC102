@@ -6,7 +6,6 @@ int main()
 	int temp;
 	cout << "Enter temperature in degree farenheight: ";
 	cin >> temp;
-	
 	if (temp < 32){
 		cout << "Bring Heavy Jacket";
 	}else if (temp < 50){
