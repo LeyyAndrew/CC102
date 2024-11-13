@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int temp;
-	cout << "What is the temperature?:";
+	cout << "Enter temperature in degree farenheight: ";
 	cin >> temp;
 	
 	if (temp < 32){
