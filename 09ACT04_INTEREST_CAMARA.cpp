@@ -10,7 +10,7 @@ int main(){
 	cin >> level;
 	cout << "Enter account balance: ";
 	cin >> balance;
-	if (type == 'P'){
+	if (type == 'P' || type == 'p'){
 		if (level == 'S' || level == 's'){
 			if (balance >= 0 && balance < 1000){
 				rate = 1.2;
